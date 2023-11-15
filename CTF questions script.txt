@@ -1,0 +1,23 @@
+Ctf flavor text/question script:
+
+Note all flags are in AEAS{.....} format where .... can be any letter, number or symbol.
+
+    Here is an easy warmup for you all. Find the flag thats most SUS.
+
+
+Flag:
+
+    Time to ramp it up a notch. One of the file is not like the others. Find the Imposter and remove his disguise!
+
+
+Flag:
+
+    You are halfway there! If you Never give up, you shall Never be deserted by the flag. That is your key to success.
+
+
+Flag:
+
+    Oh no! One of the files have been sent to the shadow realm! Can you think outside the box and get it back?
+
+
+Flag: 
