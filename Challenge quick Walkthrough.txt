@@ -1,0 +1,50 @@
+To find regular File:
+DO mmls Ctf_SEPB_Challenge.dd
+Do fls -o 82048 Ctf_SEPB_Challenge.dd
+Do fls -o 82048 Ctf_SEPB_Challenge.dd 7
+Do istat -o 82048 Ctf_SEPB_Challenge.dd 104
+Do blkcat -o 82048 Ctf_SEPB_Challenge.dd 9143
+
+
+To find Deleted File:
+DO mmls Ctf_SEPB_Challenge.dd
+Do fls -o 82048 Ctf_SEPB_Challenge.dd
+Do fls -o 82048 Ctf_SEPB_Challenge.dd 7
+
+.......the deleted file recover steps
+
+or big brain way:
+Do strings -t d Ctf_SEPB_Challenge.dd | grep 'AEAS'
+Do expr 82048 \* 512
+Do expr 46690304 - 42008576 
+Do expr 4681728 / 512
+Do blkcat -o 82048 Ctf_SEPB_Challenge.dd 9144
+
+
+To Find Keyword File:
+Do strings -t d Ctf_SEPB_Challenge.dd | grep 'Never'
+Do expr 82048 \* 512
+Do expr 46690816 - 42008576 
+Do expr 4682240 / 512
+Do blkcat -o 82048 Ctf_SEPB_Challenge.dd 9145 
+
+or big Brain way:
+DO mmls Ctf_SEPB_Challenge.dd
+Do fls -o 82048 Ctf_SEPB_Challenge.dd
+Do fls -o 82048 Ctf_SEPB_Challenge.dd 7
+Do istat -o 82048 Ctf_SEPB_Challenge.dd 114
+Do blkcat -o 82048 Ctf_SEPB_Challenge.dd 9145
+
+  
+
+
+To Find Renamed File:
+Do mmls Ctf_SEPB_Challenge.dd
+Do sudo mount -o ro,loop,offset=42008576 Ctf_SEPB_Challenge.dd /mnt/img
+Do cd /mnt/img
+Do ls -al
+Do cd MyDirectory 
+Do ls -al
+Do cat Just\ a\ normal\ file.txt 
+
+See the starting. It says PNG. SO convert file to PNG and voila, you get the picture and the flag
